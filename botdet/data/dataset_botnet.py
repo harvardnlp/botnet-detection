@@ -37,6 +37,7 @@ class BotnetDataset(Dataset):
     """
 
     # url = 'https://sandbox.zenodo.org/record/503403/files/botnet_chord.tar.gz'
+    # datasets available at https://zenodo.org/record/3689089
     urls = {'chord': 'https://zenodo.org/record/3689089/files/botnet_chord.tar.gz',
             'debru': 'https://zenodo.org/record/3689089/files/botnet_debru.tar.gz',
             'kadem': 'https://zenodo.org/record/3689089/files/botnet_kadem.tar.gz',
