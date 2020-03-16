@@ -16,7 +16,7 @@ A collection of different botnet topologyies overlaid onto normal background net
 
 From source 
 ```
-git clone https://github.com/jzhou316/botnet-detection
+git clone https://github.com/harvardnlp/botnet-detection
 cd botnet-detection
 python setup.py install
 ```
