@@ -133,7 +133,7 @@ With the above configuration, we run graph neural network models (with 12 layers
 
 #### Note
 
-We also provide labels on the edges under the name `edge_y`, which can be used for the complete botnet community recovery task.
+We also provide labels on the edges under the name `edge_y`, which can be used for the complete botnet community recovery task, or for interpretation matters.
 
 ## Citing
 
