@@ -1,6 +1,7 @@
 # botnet-detection
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Paper](http://img.shields.io/badge/paper-arxiv.2003.06344-B31B1B.svg)](https://arxiv.org/abs/2003.06344)
 
 Topological botnet detection datasets and automatic detection with graph neural networks.
 
