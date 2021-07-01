@@ -26,13 +26,15 @@ def download_and_decompress(raw_link, CAIDAUser, CAIDAPassword):
     
     #decompress the data
     cmd = f'gunzip {pcap_file}'
-    os.system(cmd)   
+    os.system(cmd)
     
     #read time, src, dst
     cmd = f'tshark -r {pcap_file_decompressed} -Y \"ip\" -T fields -E separator=@ -e frame.time -e ip.src -e ip.dst > {tmp_file}'
+    os.system(cmd)
 
     # Rename file name when reading is complete
     cmd = f'mv {tmp_file} {pcap_file_decompressed}'
+    os.system(cmd)
 
     return pcap_file_decompressed
 
