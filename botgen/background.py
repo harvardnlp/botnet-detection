@@ -9,7 +9,7 @@ import h5py
 import numpy as np
 import ipaddress
 import pathlib
-import datetime as datatime
+import datetime as datetime
 from itertools import product
 
 def write_single_graph(f, graph_id, x, edge_index, y, attrs=None, **kwargs):
@@ -70,6 +70,9 @@ def prepare_background(f, dst_dir, dst_name, graph_id, start_time, stop_time):
     #aggregate nodes, build dictionary
     df['srcIP'] = df['srcIP'].apply(lambda x: x >> 8)#
     df['dstIP'] = df['dstIP'].apply(lambda x: x >> 8)#
+    
+    # Drop time column and get rid of duplicates
+    df = df.drop(columns=['time'])
     df = df.drop_duplicates()
     
     #renumber into 0, 1, 2, ..
