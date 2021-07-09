@@ -68,8 +68,8 @@ def prepare_background(f, dst_dir, dst_name, graph_id, start_time, stop_time):
     df["dstIP"] = df["dstIP"].apply(ip2int)
     
     #aggregate nodes, build dictionary
-    df['srcIP'] = df['srcIP'].apply(lambda x: x >> 8)#
-    df['dstIP'] = df['dstIP'].apply(lambda x: x >> 8)#
+    df['srcIP'] = df['srcIP'].apply(lambda x: x >> 12)# use ip/20 in our experiment, feel free to change
+    df['dstIP'] = df['dstIP'].apply(lambda x: x >> 12)# use ip/20 in our experiment, feel free to change
     df = df.drop_duplicates()
     
     #renumber into 0, 1, 2, ..
