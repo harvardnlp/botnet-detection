@@ -78,7 +78,7 @@ For writing graph data, check code in this directory.
 For reading graph data, one can do:
 ```
 import h5py
-with open('filename', 'r') as f:
+with h5py.File('filename', 'r') as f:
     e = f['0']['edge_index'][()]             # take out the edge indexes from the first graph with id '0'
     num_nodes = f['0'].attrs['num_nodes']    # access the statistics stored in attributes of the first graph with id '0'
     num_graphs = f.attrs['num_graphs']       # access the statistics stored in attributes of the dataset file
