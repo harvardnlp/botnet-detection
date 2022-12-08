@@ -91,3 +91,10 @@ graphs = dd.io.load('filename')        # this will return a dictionary, with eac
                                        # attributes are key-item pairs in the dictionaries as well
 ```
 `deepdish` also allows partial loading of the data based on data path and slice indexes.
+
+
+## Time Series Graph Data (Dynamic Graph)
+
+Data can be stored in the same way, except that there should be extra attributes with relevant information,
+such as the size of time window based on which the graph labels are generated, 
+number of different time series and their lengths, etc.
